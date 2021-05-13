@@ -1,11 +1,6 @@
-import webbrowser
-from altair.vegalite.v4.api import _dataset_name
 import streamlit as st
 import pandas as pd
-from sklearn import datasets
-import st_state_patch as st_state
 import SessionState
-from sklearn.model_selection import train_test_split
 import pandas as pd
 import pickle
 
