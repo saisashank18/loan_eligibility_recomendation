@@ -16,12 +16,16 @@ def MLmodel(gender,married,self_employed,Dependents,Applicant_Income,Co_Applican
     df.Education.replace(('Graduate', 'Not Graduate'), (1, 0), inplace=True)
     df.Self_Employed.replace(('No', 'Yes'), (1, 0), inplace=True)
     df.Property_Area.replace(('Urban', 'Semiurban',  'Rural'), (1, 0.5, 0), inplace=True)
-    filename = 'model.sav'
+    filename = 'model3.sav'
     model = pickle.load(open(filename, 'rb'))
     res = model.predict(df)
     res = res.tolist()
     print(res[0])
-    if(res[0]==0):
+    
+    
+    
+    
+    if(res[0]==1):
         st.write("Eligible")
     else:
         st.write("Not Eligible")
@@ -49,7 +53,7 @@ def preprocessML():
     Loan_Amount = st.number_input("Please enter your Loan Amount", 0)
     Loan_Amount_term = st.number_input("Please enter your Loan Amount term in days", 0)
     Property_area = st.selectbox('Please select your Area',('Urban', 'Semiurban','Rural'))
-    Credit_History = st.selectbox('Do you have pending Credit History',('Yes', 'No'))
+    Credit_History = st.selectbox('Have you cleared your Credit History',('Yes', 'No'))
     if Credit_History=='Yes':
         Credit_History=1
     else:
