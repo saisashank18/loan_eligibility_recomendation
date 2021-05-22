@@ -71,12 +71,16 @@ def preprocessML():
 def basicEligibility(name, age, cibil):
     age = int(age)
     cibil = int(cibil)
-    if(cibil <= 300 and cibil>= 900):
+    if(cibil < 300 or cibil > 900):
         st.write("Enter valid CIBIL Score")
-    if age > 18 and cibil>=700:
+        return
+    elif age > 18 and cibil>=700:
         preprocessML()
     elif(cibil<700):
         st.write("Not Eligible, You don't have good CIBIL Score, Minimum is 700")
+        return
+    st.write("Your have to be above 18 to apply for a loan")
+    
     return
 
 
