@@ -10,7 +10,7 @@ s = SessionState.get(button=False, button2=False)
 
 def MLmodel(gender, married, self_employed, Dependents, Applicant_Income, Co_Applicant_Income, Loan_Amount, Loan_Amount_term, Property_area, Credit_History, education):
     data = [{'Gender': gender, 'Married': married, 'Dependents': Dependents, 'Education': education, 'Self_Employed': self_employed, 'ApplicantIncome': Applicant_Income,
-             'CoapplicantIncome': Co_Applicant_Income, 'LoanAmount': Loan_Amount/4, 'Loan_Amount_Term': Loan_Amount_term, 'Credit_History': Credit_History, 'Property_Area': Property_area}]
+             'CoapplicantIncome': Co_Applicant_Income, 'LoanAmount': Loan_Amount, 'Loan_Amount_Term': Loan_Amount_term, 'Credit_History': Credit_History, 'Property_Area': Property_area}]
     df = pd.DataFrame(data)
     df.Gender.replace(('Male', 'Female'), (1, 0), inplace=True)
     df.Dependents.replace(('0', '1', '2', '3+'),
@@ -25,8 +25,25 @@ def MLmodel(gender, married, self_employed, Dependents, Applicant_Income, Co_App
     res = model.predict(df)
     res = res.tolist()
     print(res[0])
-
-    if(res[0] == 1):
+    result = res[0]
+    term = Loan_Amount_term * 4
+    if(term < 360):
+        st.write("Not Eligible")
+    elif(Loan_Amount < Applicant_Income):
+        st.write("Eligible")
+    elif(Applicant_Income < 30000 and Loan_Amount > 500000):
+        st.write("Not Eligible")
+    elif(education == 'Not Graduate' and Applicant_Income < 30000):
+        st.write("Not Eligible")
+    elif(Loan_Amount > 500000 and term < 1000):
+        st.write("Not Eligible")
+    elif(Loan_Amount == 4 * Applicant_Income):
+        st.write("Not Eligible")
+    elif(Credit_History == 'No' and Applicant_Income < 100000):
+        st.write("Not Eligible")
+    elif(Property_area == 'Rural' and Applicant_Income < 50000):
+        st.write("Not Eligible")
+    elif(res[0] == 1):
         st.write("Eligible")
     else:
         st.write("Not Eligible")
@@ -73,7 +90,7 @@ def preprocessML():
         #    " ",Loan_Amount_term," ",Property_area," ",Credit_History," ")
         # run model
         MLmodel(gender, married, self_employed, Dependents, Applicant_Income,
-                Co_Applicant_Income, Loan_Amount, Loan_Amount_term, Property_area, Credit_History, education)
+                Co_Applicant_Income, Loan_Amount, Loan_Amount_term/4, Property_area, Credit_History, education)
 
 
 def basicEligibility(name, age, cibil):
@@ -84,11 +101,13 @@ def basicEligibility(name, age, cibil):
         return
     elif age > 18 and cibil >= 700:
         preprocessML()
+        return
     elif(cibil < 700):
         st.write("Not Eligible, You don't have good CIBIL Score, Minimum is 700")
         return
-    st.write("Your have to be above 18 to apply for a loan")
-
+    elif(age < 18):
+        st.write("Your have to be above 18 to apply for a loan")
+        return
     return
 
 
