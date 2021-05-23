@@ -51,6 +51,19 @@ def MLmodel(gender, married, self_employed, Dependents, Applicant_Income, Co_App
         st.write("Eligible")
     else:
         st.write("Not Eligible")
+    if(res[0] == 0):
+        st.title("here is your loan recomendation")
+
+        def file_selector(folder_path='D:\sashank'):
+            filenames = os.listdir(folder_path)
+            selected_filename = st.selectbox('Select a file', filenames)
+            return os.path.join(folder_path, selected_filename)
+
+        filename = file_selector()
+        st.write('You selected `%s`' % filename)
+        df = pd.read_csv(filename)
+
+        st.write(df.head())
 
 
 def preprocess(name, age, cibil):
