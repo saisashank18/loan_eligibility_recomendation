@@ -61,7 +61,7 @@ def MLmodel(gender, married, self_employed, Dependents, Applicant_Income, Co_App
         st.write("Not Eligible")
     elif(Property_area == 'Semiurban' and education == 'Not Garduate' and Applicant_Income < 80000):
         st.write("Not Eligible")
-    elif(Loan_Amount < 10000 and Loan_Amount > 3000000):
+    elif(Loan_Amount < 10000 or Loan_Amount > 4000000):
         st.write("Not Eligible, Your Loan Amount is either too High or too Low")
     elif(res[0] == 1):
         #st.write("Eligible")
