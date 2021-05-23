@@ -7,6 +7,7 @@ import pickle
 s = SessionState.get(button=False, button2=False)
 #s2 = SessionState.get(button2=False)
 
+data = pd.read_csv('data.csv')
 
 def MLmodel(gender, married, self_employed, Dependents, Applicant_Income, Co_Applicant_Income, Loan_Amount, Loan_Amount_term, Property_area, Credit_History, education):
     data = [{'Gender': gender, 'Married': married, 'Dependents': Dependents, 'Education': education, 'Self_Employed': self_employed, 'ApplicantIncome': Applicant_Income,
@@ -47,6 +48,8 @@ def MLmodel(gender, married, self_employed, Dependents, Applicant_Income, Co_App
         st.write("Not Eligible")
     elif(Property_area == 'Semiurban' and education == 'Not Garduate' and Applicant_Income < 80000):
         st.write("Not Eligible")
+    elif(Loan_Amount < 10000 and Loan_Amount > 4000000):
+        st.write("Not Eligible, Your Loan Amount is too High or too Low")
     elif(res[0] == 1):
         st.write("Eligible")
     else:
