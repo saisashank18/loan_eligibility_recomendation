@@ -43,6 +43,10 @@ def MLmodel(gender, married, self_employed, Dependents, Applicant_Income, Co_App
         st.write("Not Eligible")
     elif(Property_area == 'Rural' and Applicant_Income < 50000):
         st.write("Not Eligible")
+    elif(age > 60 and Applicant_Income < 50000 and education == 'Not Graduate'):
+        st.write("Not Eligible")
+    elif(Property_area == 'Semiurban' and education == 'Not Garduate' and Applicant_Income < 80000):
+        st.write("Not Eligible")
     elif(res[0] == 1):
         st.write("Eligible")
     else:
