@@ -1,0 +1,46 @@
+List of Banks/Lenders,Minimum Interest rate,Maximum Interest rate,Loan Amount,Minimum Loan Amount,Maximum Loan Amount,Turnaround Time,Processing Fee
+Allahabad Bank,9.05,13.65,"Minimum Loan Amount - INR 50,000
+Maximum Loan Amount - 12 times of gross monthly salary for employees having a monthly remuneration of INR 15,000 - INR 20,000
+24 times the gross monthly salary for individuals earning above INR 20,000. The maximum loan amount, however, won't exceed INR 7.50 lakh",50000,7500000,Depends on the internal policy of the bank,"1.22% of loan Amount, Minimum INR 1,228"
+Andhra Bank,8.9,13,"Salaried - The loan amount is set in a way that the take home income is not less than 40% of the gross salary after all the deductions, including the proposed EMI Non-salaried - 2 times the average annual income for the past 3 years as per the Income Tax Return (ITR)",,,Depends on the internal policy of the bank,As Applicable
+Axis Bank,10.49,21,"INR 50,000 - INR 15,00,000",50000,1500000,,1.50%-2.00% of the loan amount plus applicable GST
+Bajaj Finserv,14,16,"Upto INR 25,00,000",0,2500000,Within 24 hours,Up to 3% of the loan amount
+Bank of Baroda,10,15.6,"Up to INR 10,00,000 for people residing in metros and urban areas Up to INR 5,00,000 for people living in semi-urban and rural areas",0,1000000,Depends on the internal policy of the bank,"2% of the loan amount, subject to a minimum and maximum limit of INR 1,000 and INR 10,000, respectively. The fee will also include applicable GST"
+,,,,,,,
+,,,,,,,
+,,,,,,,
+Bank of India,10.35,12.35,"Upto INR 5,00,000 - INR 10,00,000",500000,1000000,Depends on the internal policy of the bank,2% of the loan amount plus applicable GST
+Bank of Maharashtra,9.55,10.55,"Upto INR 5,00,000 - INR 10,00,000",500000,1000000,Depends on the internal policy of the bank,"1% of the loan amount plus GST, subject to a minimum of INR 1,000"
+Canara Bank,11.25,13.3,"Six months gross salary or INR 3,00,000, whichever is less",0,300000,Sanctions at Branch/RAH - 7 Days,"0.50% of the loan amount, subject to a minimum and maximum of INR 1,000 and INR 5,000 respectively"
+,,,,,,Sanctions at Circle - 15 Days,
+,,,,,,Sanctions at HO - 2-3 weeks,
+,,,,,,,
+Central Bank of India,9.85,10.05,"20 times of gross salary, subject to a maximum of INR 10,00,000. The minimum net take home income must not fall below 40% of the gross salary after deductions, including the proposed EMI",0,1000000,Depends on the internal policy of the bank,INR 500 + applicable GST
+Citibank,9.99,16.49,"Upto INR 30,00,000",0,350000,Within 48 hours,Upto 3% of the loan amount
+Corporation Bank,8.9,13,"Upto INR 3,50,000",0,350000,Depends on the internal policy of the bank,"1.50% of the loan amount, subject to a minimum of INR 500"
+Dena Bank,10,15.6,"Up to INR 10,00,000 for people residing in metros and urban areas Up to INR 5,00,000 for people living in semi-urban and rural areas",0,1000000,Depends on the internal policy of the bank,"2% of the loan amount, subject to a minimum and maximum limit of INR 1,000 and INR 10,000, respectively. The fee will also include applicable GST"
+,,,,,,,
+DCB Bank,13,25,Upto INR 5 lakh,0,500000,Within 3-4 working days,2% of the loan amount
+Federal Bank,10.49,17.99,Upto INR 10 lakh,0,1000000,Depends on the internal policy of the bank,0.50% of the loan amount
+HDFC Bank,10.4,17,"There's no maximum limit. Your income, credit score and repayment capacity will dictate the loan amount",0,NaN,Within 3-4 working days,NIL-2.50% of the loan amount plus applicable GST
+HSBC,9.99,14,Upto INR 30 lakh,0,3000000,Within 15 days post the receipt of the application form,Upto 1% of the loan amount
+ICICI Bank,10.75,17.5,Upto INR 40 lakh,0,4000000,Within 72 hours of the submission of documents,INR 999 -2.25% of the loan amount+ applicable GST
+IDBI Bank,9.5,14,Upto INR 10 lakh,0,1000000,Depends on the internal policy of the bank,As applicable
+Karur Vysya Bank,11,19,Upto INR 10 lakh,0,100000,In-principle sanction - 15 minutes,1% of the loan amount
+Kotak Mahindra Bank,10.75,,Upto INR 20 lakh,0,2000000,Within 10 working days,0.99%-2.50% of the loan amount plus applicable GST
+Nainital Bank,10,10.5,"15 times of net take home salary, subject to a maximum of INR 3-5 lakh 2 times of average annual income of last 2 years, subject to a maximum of INR 2 lakh for self-employed",0,500000,Depends on the internal policy of the bank,0.50%-1.00% of the loan amount plus applicable GST
+,,,,,,,
+,,,,,,,
+Oriental Bank of Commerce,8.95,14,"15 times of gross salary, subject to a maximum of INR 10 lakh",0,1000000,Depends on the internal policy of the bank,"0.50% of the loan amount, subject to a minimum of INR 500, plus applicable GST"
+RBL Bank,17.5,26,Upto INR 20 lakh,0,2000000,Depends on the internal policy of the bank,2%-2.50% of the loan amount
+Punjab National Bank (PNB),8.95,14,"20 times of net monthly salary or INR 4 lakh, whichever is lower",0,400000,Depends on the internal policy of the bank,1.80% of the loan amount plus applicable GST
+State Bank of India (SBI),9.6,13.6,Upto INR 20 lakh,0,2000000,Depends on the internal policy of the bank,1% of the loan amount plus applicable GST
+Standard Chartered Bank,14,21,Upto INR 30 lakh,0,3000000,Within 4-7 working days post receipt of the documents,1% of the loan amount plus applicable GST
+Syndicate Bank,11.25,13.3,"Salaried - 12 months gross salary, subject to a maximum of INR 4-5 lakh Self-employed - Upto INR 5 lakh",0,500000,Depends on the internal policy of the bank,"0.50% of the loan amount, subject to a minimum of INR 500 plus applicable GST"
+,,,,,,,
+UCO Bank,8.45,10.45,"10 times of gross monthly salary, subject to a maximum of INR 10 lakh",0,1000000,Depends on the internal policy of the bank,"1% of the loan amount, subject to a minimum of INR 750, plus applicable GST"
+United Bank of India,8.95,14,"10 months gross salary or INR 2 lakh, whichever is less",0,1000000,Depends on the internal policy of the bank,1% of the loan amount plus applicable GST
+Vijaya Bank,10,15.6,"Up to INR 10,00,000 for people residing in metros and urban areas Up to INR 5,00,000 for people living in semi-urban and rural areas",0,1000000,Depends on the internal policy of the bank,"2% of the loan amount, subject to a minimum and maximum limit of INR 1,000 and INR 10,000 respectively. The fee will also include applicable GST"
+YES BANK,10.5,NaN,Upto INR 40 lakh,0,4000000,Within 5 days from the receipt of the application,Upto 2.50% of the loan amount subject to a minimum of INR 999 plus applicable GST
+Tata Capital,10.99,19.75,Upto INR 25 lakh,0,2500000,Within 72 hours from the receipt of the application,INR 999-2.50% of the loan amount plus applicable GST
+Fullerton India,12,25,Upto INR 25 lakh,0,2500000,Within 30 minutes of loan approval,2% of the loan amount plus applicable GST
