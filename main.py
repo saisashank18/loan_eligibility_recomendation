@@ -39,7 +39,7 @@ def MLmodel(gender, married, self_employed, Dependents, Applicant_Income, Co_App
         st.write("Not Eligible")
     elif(Loan_Amount == 4 * Applicant_Income):
         st.write("Not Eligible")
-    elif(Credit_History == 'No' and Applicant_Income < 100000):
+    elif(Credit_History == 0 and Applicant_Income < 100000):
         st.write("Not Eligible")
     elif(Property_area == 'Rural' and Applicant_Income < 50000):
         st.write("Not Eligible")
