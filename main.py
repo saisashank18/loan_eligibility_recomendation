@@ -7,7 +7,19 @@ import pickle
 s = SessionState.get(button=False, button2=False)
 #s2 = SessionState.get(button2=False)
 
-data = pd.read_csv('data.csv')
+def Recommender(Loan_Amount):
+    st.title("Congratulations!! Your are Eligible")
+    data = pd.read_csv('data.csv')
+    data.drop(['Turnaround Time'],axis=1,inplace=True)
+    data.drop(['Processing Fee'],axis=1,inplace=True)
+    data = data[data['Minimum Loan Amount'] <= Loan_Amount]
+    data = data[data['Maximum Loan Amount'] >= Loan_Amount]
+    data = data.sort_values(['Minimum Interest rate','Maximum Interest rate'], ascending=True)
+    # resetting index
+    data.reset_index(inplace = True)
+    data.drop(['index'],axis=1,inplace=True)
+    print(data)
+    st.table(data.head(7))
 
 def MLmodel(gender, married, self_employed, Dependents, Applicant_Income, Co_Applicant_Income, Loan_Amount, Loan_Amount_term, Property_area, Credit_History, education):
     data = [{'Gender': gender, 'Married': married, 'Dependents': Dependents, 'Education': education, 'Self_Employed': self_employed, 'ApplicantIncome': Applicant_Income,
@@ -31,15 +43,16 @@ def MLmodel(gender, married, self_employed, Dependents, Applicant_Income, Co_App
     if(term < 360):
         st.write("Not Eligible")
     elif(Loan_Amount < Applicant_Income):
-        st.write("Eligible")
+        #st.write("Eligible")
+        Recommender(Loan_Amount)
     elif(Applicant_Income < 30000 and Loan_Amount > 500000):
         st.write("Not Eligible")
     elif(education == 'Not Graduate' and Applicant_Income < 30000):
         st.write("Not Eligible")
     elif(Loan_Amount > 500000 and term < 1000):
         st.write("Not Eligible")
-    elif(Loan_Amount == 4 * Applicant_Income):
-        st.write("Not Eligible")
+    # elif(Loan_Amount == 4 * Applicant_Income):
+    #     st.write("Not Eligible")
     elif(Credit_History == 0 and Applicant_Income < 100000):
         st.write("Not Eligible")
     elif(Property_area == 'Rural' and Applicant_Income < 50000):
@@ -48,25 +61,13 @@ def MLmodel(gender, married, self_employed, Dependents, Applicant_Income, Co_App
         st.write("Not Eligible")
     elif(Property_area == 'Semiurban' and education == 'Not Garduate' and Applicant_Income < 80000):
         st.write("Not Eligible")
-    elif(Loan_Amount < 10000 and Loan_Amount > 4000000):
-        st.write("Not Eligible, Your Loan Amount is too High or too Low")
+    elif(Loan_Amount < 10000 and Loan_Amount > 3000000):
+        st.write("Not Eligible, Your Loan Amount is either too High or too Low")
     elif(res[0] == 1):
-        st.write("Eligible")
+        #st.write("Eligible")
+        Recommender(Loan_Amount)
     else:
         st.write("Not Eligible")
-    if(res[0] == 0):
-        st.title("here is your loan recomendation")
-
-        def file_selector(folder_path='D:\sashank'):
-            filenames = os.listdir(folder_path)
-            selected_filename = st.selectbox('Select a file', filenames)
-            return os.path.join(folder_path, selected_filename)
-
-        filename = file_selector()
-        st.write('You selected `%s`' % filename)
-        df = pd.read_csv(filename)
-
-        st.write(df.head())
 
 
 def preprocess(name, age, cibil):
